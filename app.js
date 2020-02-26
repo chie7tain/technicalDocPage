@@ -19,11 +19,31 @@ const responsiveNav=()=>{
 
   });
 }
+
+const fixCrazyLinks =()=>{
+  let [...headers] = document.querySelectorAll(".header");
+  let [...allLinks] = document.querySelectorAll(".navigation a");
+  allLinks.find((link,index)=>{
+    link.addEventListener("click",()=>{
+      headers.find((header)=>{
+        if(link.innerHTML == header.innerText){
+          header.classList.add("headSpace");//this makes the current header have more padding space so it can be seen by the user
+          setTimeout(()=>{
+            header.classList.remove("headSpace");
+          },10000);
+        }else{
+          header.classList.remove("headSpace");
+        }
+      })
+     })
+    })
+}
 // this js helps to fixed the navbar as we scroll thanks w3School for this
-const fixedNav=()=>{
+const stickyNav=()=>{
   window.onscroll = ()=>{
     addRemoveSticky();
   }
+  let mainDoc = document.querySelector("#main-doc");
 // get the navbar
   let navbar = document.querySelector("#navbar");
   // get the offset position of the navbar
@@ -37,8 +57,10 @@ const fixedNav=()=>{
     }
   }
 }
+
 const app =()=>{
   responsiveNav();
-  fixedNav();
+  stickyNav();
+  fixCrazyLinks();
 }
 app();

@@ -1,9 +1,15 @@
 /* @import url('https://fonts.googleapis.com/css?family=Bad+Script&display=swap'); */
+/* =========== */
 @import url('https://fonts.googleapis.com/css?family=Bad+Script|Merienda&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Courgette&display=swap'); */
+/* ============================= */
 /* browser default styles reset */
 /* @import url('https://fonts.googleapis.com/css?family=Fondamento&display=swap'); */
+/* ================ */
 @import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap&subset=latin-ext');
+/* this font is for code */
+@import url('https://fonts.googleapis.com/css?family=Fira+Code&display=swap');
+/* ============ */
 *{
   margin:0;
   padding:0;
@@ -71,16 +77,16 @@ body{
   @keyframes linkfade{
     from{
       opacity: 0;
-      transform:translate(50px);
+      transform:translate(50%);
     }
     to{
       opacity:1;
-      transform:transform(0px);
+      transform:translateX(0%);
     }
   }
   .nav-active{
     transform:translateX(0%);
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease-in;
   }
   /* responsive nav bar styles */
      .nav-burger div{
@@ -94,7 +100,7 @@ body{
     width:36px;
     height:25px;
     cursor: pointer;
-    transition:all 2s ease;
+    transition:all 0.5s ease;
   }
 .toggle #line1{
   transform:rotate(-45deg) translate(-5px,6px);
@@ -125,6 +131,7 @@ body{
     color:rgb(238, 228, 228);
     margin:2% auto;
     padding:1%;
+    font-family:"Fira code";
     font-size:15px;
   }
   article{
@@ -139,25 +146,31 @@ body{
     padding-top:60px;
   }
 }
+
 /* tablet design breakpoint */
 
 @media only screen and (min-width:401px) and (max-width:960px){
   body{
-    background:orange;
+    background:rgb(54, 137, 233);
     overflow-x: hidden;
   }
+  /* begining of repsonsive nav bar styles */
   nav{
     display:flex;
     justify-content:space-between;
     align-items: center;
-    height: 70px;
+    /* height: 50px; */
+    background:yellow;
+    padding:1%;
+    /* margin-bottom:70px; */
   }
   .navigation{
     position:absolute;
     right:0px;
-    top:70px;
-    background:yellow;
-    width:60%;
+    top:100%;
+    background:white;
+    width:40%;
+    padding:1%;
     transform:translateX(100%);
     transition:all 0.5s ease-in;
   }
@@ -166,13 +179,25 @@ body{
     transition:transform 0.5s ease-in;
   }
   .nav-link{
-    color:white;
+    color:rgb(138, 103, 103);
+  }
+  .navigation li{
+    opacity:0;
   }
   .nav-burger{
     width:50px;
     height: 35px;
     /* background:hsl(30,40%,50%); */
     cursor:pointer;
+  }
+  .sticky{
+    position: fixed;
+    top:0px;
+    width:100%;
+  }
+  .sticky + #main-doc{
+    padding-top:10%;
+
   }
   .nav-burger div{
     width: 40px;
@@ -201,7 +226,39 @@ body{
       transform:translateX(0%);
     }
   }
+  /* end of responsive bar */
+  .main-head-link{
+    color:#000;
+    text-decoration:none;
+  }
+  .header{
+    font-size: 19px;
+    background:whitesmoke;
+    padding:1%;
+    margin:1%;
+  }
+  #main-doc{
+    padding:5%;
+    border-spacing:5px;
+  }
+code{
+  /* width: 100%; */
+  font-family:"Fira code";
+  font-size:15px;
+  background:rgb(95, 29, 29);
+  color:whitesmoke;
+  /* padding:7px; */
+  /* margin:1% auto; */
 }
+.headSpace{
+  padding-top:50px;
+  text-align: center;
+  transition: all 0.5s ease-in;
+}
+
+}
+
+/* end of tablet styles */
 /* =========================================== */
 
 /* desktop design breakpoint */
@@ -209,6 +266,7 @@ body{
   body{
     background:lightgray;
   }
+
 }
 
  /* transform:rotate(-180deg) translate(7px,2px); */
