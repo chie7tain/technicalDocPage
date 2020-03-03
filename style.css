@@ -7,12 +7,12 @@
 /* ================ */
 
 
-/* @import url('https://fonts.googleapis.com/css?family=Bad+Script|Merienda&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Bad+Script|Merienda&display=swap');
 
-@import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap&subset=latin-ext'); */
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap&subset=latin-ext'); 
 
 /* this font is for code */
-/* @import url('https://fonts.googleapis.com/css?family=Fira+Code&display=swap'); */
+ @import url('https://fonts.googleapis.com/css?family=Fira+Code&display=swap'); 
 /* ============ */
 *{
   margin:0;
