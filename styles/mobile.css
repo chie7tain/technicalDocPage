@@ -8,7 +8,7 @@
   position: fixed;
   top:0;
   width:100%;
-  height:60px;
+  /* height:60px; */
   display:flex;
   justify-content: space-around;
   align-items:center;
@@ -103,6 +103,7 @@ text-transform: capitalize;
   #main-doc{
     padding:2%;
     color:rgba(20, 18, 18, 0.863);
+    margin:0px auto;
   }
   .header{
     font-size:19px;
@@ -122,10 +123,10 @@ text-transform: capitalize;
     font-size:14px;
   }
   article{
-    margin:3% auto;
+    /* margin:3% auto; */
   }
   section{
-    scroll-margin-top: 2.5em;
+    scroll-margin-top: 3.5em;
   }
   /* .sticky{
     position:fixed;
