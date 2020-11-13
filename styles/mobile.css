@@ -1,0 +1,138 @@
+/* mobile first design using media queries */
+@media only screen and (max-width:400px){
+  body{
+    background:rgb(236, 239, 240);
+    overflow-x: hidden;
+  }
+ .nav-bar{
+  position: fixed;
+  top:0;
+  width:100%;
+  height:60px;
+  display:flex;
+  justify-content: space-around;
+  align-items:center;
+  z-index:3;
+  background:var(--white);
+  transition: var(--mainTransition);
+}
+.main-head-link{
+  color:#000;
+  text-decoration: none;
+}
+.nav-link{
+list-style-type: none;
+text-transform: capitalize;
+}
+.nav-link a{
+  text-decoration:none;
+  letter-spacing: var(--mainSpacing);
+  color:var(--primaryDarkBlue);
+  transition:var(--mainTransition);
+}
+.nav-link a:hover{
+  color:var(--White);
+  background:var(--primaryColor);
+}
+
+  /* responsive nav bar styles */
+  .burger{
+    width:40px;
+    height:40px;
+    margin:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    cursor:pointer;
+
+  }
+  .line1,.line2,.line3{
+    background:var(--primaryDarkBlue);
+    width:30px;
+    height:3px;
+    margin:3px;
+    transition:var(--mainTransition);
+  }
+  .navigation{
+    position: absolute;
+    right:0px;
+    left:0px;
+    top:15vh;
+    width:80%;
+    margin:auto;
+    /* height:100vh; */
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    transform:translateX(100%);
+    background:transparent;
+    transition:var(--mainTransition);
+    justify-content: space-evenly;
+    border-radius: 10px;
+  }
+  .navigation .nav-link{
+    opacity: 0;
+  }
+  .nav-active{
+    transform:translateX(0%);
+    max-width:calc(100% - 40px);
+    background:var(--white);
+  }
+  @keyframes navLinkFade{
+    from{
+      opacity:0;
+      transform:translateX(50px);
+    }
+    to{
+      opacity:1;
+      transform:translateX(0px);
+    }
+  }
+  .toggle .line1{
+    transform:rotate(-45deg) translate(-5px,6px);
+  }
+  .toggle .line2{
+    opacity:0;
+  }
+  .toggle .line3{
+    transform:rotate(45deg) translate(-5px,-6px);
+  }
+  /* end of responsive nav bar styles */
+/* end of styles for responsive nav bar */
+  #main-doc{
+    padding:2%;
+    color:rgba(20, 18, 18, 0.863);
+  }
+  .header{
+    font-size:19px;
+    font-family: "Bad script";
+    background:yellow;
+    text-align: center;
+    margin:1%;
+    box-shadow: 0px 0px 3px 0px rgba(3, 4, 7, 0.19),  0px 0px 3px 0px rgba(2, 2, 2, 0.19), 0px 0px 3px 0px rgba(3, 4, 7, 0.19);
+  }
+  code{
+    /* background:rgb(85, 187, 235); */
+    background:rgb(46, 121, 75);
+    color:rgb(238, 228, 228);
+    margin:2% auto;
+    padding:1%;
+    font-family:"Fira code";
+    font-size:14px;
+  }
+  article{
+    margin:3% auto;
+  }
+  section{
+    scroll-margin-top: 2.5em;
+  }
+  /* .sticky{
+    position:fixed;
+    top:0;
+    width:100%;
+  } */
+  #main-doc{
+    margin-top:4em;
+  }
+}

@@ -6,18 +6,39 @@
 /* @import url('https://fonts.googleapis.com/css?family=Fondamento&display=swap'); */
 /* ================ */
 
-
+@import url('https://fonts.googleapis.com/css?family=Fira+Code&display=swap');
  @import url('https://fonts.googleapis.com/css?family=Bad+Script|Merienda&display=swap');
 
-@import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap&subset=latin-ext'); 
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap&subset=latin-ext');
 
-/* this font is for code */
- @import url('https://fonts.googleapis.com/css?family=Fira+Code&display=swap'); 
-/* ============ */
+
+
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
+}
+:root{
+/* main colors */
+--softBlue: hsl(231, 69%, 60%);
+--softRed: hsl(0, 94%, 66%);
+ /* Neutral */
+--grayishBlue: hsl(229, 8%, 60%);
+--veryDarkBlue: hsl(229, 31%, 21%);
+--mainWhite:#f5f5f5;
+--mainSpacing:0.1rem;
+  /* primary colors */
+  --primaryDarkBlue:hsl(233,26%,24%);
+  --primaryLimeGreen:hsl(136,65%,51%);
+  --primaryBrightCyan:hsl(192,70%,51%);
+  /* neutral colors */
+  --grayishBlue:hsl(233,8%,62%);
+  --lightGrayishBlue:hsl(220,16%,96%);
+  --veryLightGray:hsl(0,0%,98%);
+  --white:hsl(0,0%,100%);
+  /* addins*/
+  --mainTransition:all 0.2s ease-in;
+  --mainSpacing:0.1rem;
 }
 body{
   font-family:"Bad Script";
@@ -26,6 +47,10 @@ body{
   /* font-family: 'Courgette', ; */
   font-weight: bold;
 }
+html{
+  scroll-behavior: smooth;
+  /* scroll-margin-top:100em; */
+}
 .nav-link{
   text-decoration:none;
 
@@ -33,361 +58,6 @@ body{
 #navbar li{
   list-style-type: none;
 }
-/* ============= */
 
-/* mobile first design using media queries */
-@media only screen and (max-width:400px){
-  body{
-    background:rgb(236, 239, 240);
-    /* font-family: "Bree serif",serif; */
 
-    overflow-x: hidden;
-  }
-  nav{
-    display:flex;
-    justify-content: space-around;
-    /* background:rgb(233, 186, 163); */
-    height: 9vh;
-    align-items: center;
-    background: yellow;
-  }
-.main-head-link{
-  color:#000;
-  text-decoration: none;
-}
-  .navigation {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    width:50%;
-    height: 90vh;
-    position:absolute;
-    right:0px;
-    top:60px;
-    background:yellow;
-    /* color:yellow; */
-    transform:translateX(100%);
-    transition:transform 0.5s ease-in;
-    /* animation-name: linkfade; */
-  }
-  .navigation  li{
-    opacity:0;
-    margin:7px;
-  }
-  .navigation .nav-link{
-    color:rgb(46, 133, 133);
-  }
-  .navigation .nav-link:hover{
-    transform:scale(1);
-    background:white;
-    color:yellow;
-  }
-  @keyframes linkfade{
-    from{
-      opacity: 0;
-      transform:translate(50%);
-    }
-    to{
-      opacity:1;
-      transform:translateX(0%);
-    }
-  }
-  .nav-active{
-    transform:translateX(0%);
-    transition: transform 0.5s ease-in;
-  }
-  /* responsive nav bar styles */
-     .nav-burger div{
-    transition:all 2s ease;
-    background:rgb(134, 134, 153);
-    width:35px;
-    height:4px;
-    margin:5px auto;
-  }
-  .nav-burger{
-    width:36px;
-    height:25px;
-    cursor: pointer;
-    transition:all 0.5s ease;
-  }
-.toggle #line1{
-  transform:rotate(-45deg) translate(-5px,6px);
-  background: rgb(209, 203, 203);
-}
-.toggle #line2{
-  opacity:0;
-}
-.toggle #line3{
-  transform:rotate(45deg) translate(-5px,-6px);
-}
-/* end of responsive navbar */
-/* =========================================== */
-  #main-doc{
-    padding:2%;
-    color:rgba(20, 18, 18, 0.863);
-  }
-  .header{
-    font-size:19px;
-    font-family: "Bad script";
-    background:yellow;
-    text-align: center;
-    margin:1%;
-    box-shadow: 0px 0px 3px 0px rgba(3, 4, 7, 0.19),  0px 0px 3px 0px rgba(2, 2, 2, 0.19), 0px 0px 3px 0px rgba(3, 4, 7, 0.19);
-  }
-  .headSpace{
-  padding-top:60px;
-  text-align: center;
-  transition: all 0.5s ease-in;
-}
-  code{
-    /* background:rgb(85, 187, 235); */
-    background:rgb(46, 121, 75);
-    color:rgb(238, 228, 228);
-    margin:2% auto;
-    padding:1%;
-    font-family:"Fira code";
-    font-size:14px;
-  }
-  article{
-    margin:3% auto;
-  }
-  .sticky{
-    position:fixed;
-    top:0;
-    width:100%;
-  }
-  .sticky + #main-doc{
-    padding-top:60px;
-  }
-}
 
-/* tablet design breakpoint */
-
-@media only screen and (min-width:401px) and (max-width:960px){
-  body{
-    background:rgb(54, 137, 233);
-    overflow-x: hidden;
-  }
-  /* begining of repsonsive nav bar styles */
-  nav{
-    display:flex;
-    justify-content:space-between;
-    align-items: center;
-    /* height: 50px; */
-    background:yellow;
-    padding:1%;
-    /* margin-bottom:70px; */
-  }
-  .navigation{
-    position:absolute;
-    right:0px;
-    top:60px;
-    background:white;
-    width:40%;
-    padding:1%;
-    transform:translateX(100%);
-    transition:all 0.5s ease-in;
-  }
-  .nav-active{
-    transform:translateX(0%);
-    transition:transform 0.5s ease-in;
-  }
-  .nav-link{
-    color:rgb(138, 103, 103);
-  }
-  .navigation li{
-    opacity:0;
-  }
-  .nav-burger{
-    width:50px;
-    height: 35px;
-    /* background:hsl(30,40%,50%); */
-    cursor:pointer;
-  }
-  .sticky{
-    position: fixed;
-    top:0px;
-    width:100%;
-  }
-  .sticky + #main-doc{
-    padding-top:10%;
-
-  }
-  .nav-burger div{
-    width: 40px;
-    height: 5px;
-    margin:5px auto;
-    background:rgb(190, 182, 182);
-    transition:all 0.5s ease-in;
-  }
-  .toggle #line1{
-    transform:rotate(-45deg) translate(-5px,6px);
-    background:#000;
-  }
-  .toggle #line2{
-    opacity:0;
-  }
-  .toggle #line3{
-    transform:rotate(45deg) translate(-5px,-6px);
-  }
-  @keyframes linkfade{
-    from{
-      opacity:0;
-      transform:translateX(50%);
-    }
-    to{
-      opacity:1;
-      transform:translateX(0%);
-    }
-  }
-  /* end of responsive bar */
-  .main-head-link{
-    color:#000;
-    text-decoration:none;
-  }
-  .header{
-    font-size: 19px;
-    background:whitesmoke;
-    padding:1%;
-    margin:1%;
-    box-shadow: 0px 3px 3px 0px rgba(3, 4, 7, 0.19),  0px 0px 3px 0px rgba(2, 2, 2, 0.19), 0px 0px 3px 0px rgba(3, 4, 7, 0.19);
-  }
-  #main-doc{
-    padding:5%;
-    border-spacing:5px;
-  }
-code{
-  /* width: 100%; */
-  font-family:"Fira code";
-  font-size:15px;
-  background:rgb(95, 29, 29);
-  color:whitesmoke;
-  /* padding:7px; */
-  /* margin:1% auto; */
-}
-.headSpace{
-  padding-top:50px;
-  text-align: center;
-  transition: all 0.5s ease-in;
-}
-.hidenav{
-  display:none;
-}
-
-}
-
-/* end of tablet styles */
-/* =========================================== */
-
-/* desktop design breakpoint */
-@media only screen and (min-width:961px){
-  body{
-    background:#d3d3d3;
-     background:#eee;
-  }
-  #navbar{
-    position:fixed;
-    top:0px;
-    left:0px;
-    width:27%;
-    height: 100%;
-    padding:1%;
-  }
-  .main-head-link{
-    color:black;
-    text-decoration :none;
-    /* margin-bottom:2%; */
-  }
-  .add{
-    color:yellow;
-    background:rgb(172, 159, 159);
-    margin:1%;
-    padding: 1%;
-  }
-  .active-link{
-    background-color:#4CAF50 !important;
-    color:white !important;
-  }
-  .navigation a{
-    background:#eee;
-    color:black;
-    display:block;
-    padding:7px;
-    text-decoration:none;
-  }
-  .nav-link:active{
-    background-color:#4CAF50!important;
-    color:white!important;
-  }
-  .navigation a:hover{
-    background:#ccc;
-  }
-  .navigation{
-    width:100%;
-    height: 90%;
-    overflow-y:auto;
-  }
-
-  .navigation li{
-    margin:2%;
-  }
-
-  #main-doc{
-    padding:1%;
-    position:absolute;
-    right:0px;
-    margin-left:28%;
-  }
-  .header{
-    background:#d3d3d3;
-    padding:1%;
-    margin:1%;
-    font-size: 17px;
-    box-shadow: 0px 3px 3px 0px rgba(3, 4, 7, 0.19),  0px 0px 3px 0px rgba(2, 2, 2, 0.19), 0px 0px 3px 0px rgba(3, 4, 7, 0.19);
-    /* color:white; */
-  }
-  li{
-    padding:1%;
-    margin-left:4%;
-  }
-  code{
-    background:rgba(187, 182, 182, 0.178);
-    padding:1.5%;
-    width:100%;
-    display:block;
-    font-family: "Fira code";
-    font-size:14px;
-  }
-}
-
- /* transform:rotate(-180deg) translate(7px,2px); */
-  /* transition:transform 2s ease;  */
-  /* border-radius: 50%;
-  height: 20px;
-  width:20px;
-  background: none;
-  border:5px solid darkgreen; */
-/* } */
-/* .toggle #line2::before{
-  content:"";
-  border:2px solid green;
-
-  width:8px;
-  height:50px;
-  border-radius: 50%;
-  transform:rotate(45deg) translate(1px,9px);
-}
-.toggle #line2::after{
-  content:"";
-  border:2px solid green;
-
-  height: 50px;
-  border-radius:50%;
-  transform: rotate(360deg) translate(7px,7px);
-}
-.toggle #line3{
-  transform:rotate(180deg) translate(9px,1px);
-  transition:transform 3s ease-in;
-  background: brown;
-
-} */

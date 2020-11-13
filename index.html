@@ -3,37 +3,70 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Technical Doc Page</title>
+    <!-- styles  -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/mobile.css">
+    <link rel="stylesheet" href="./styles/tablet.css">
+    <link rel="stylesheet" href="./styles/desktop.css">
     <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
   </head>
   <body>
-      <nav id="navbar">
+      <nav class="nav-bar">
         <header>
         <h1><a class="main-head-link" href="index.html">J<span class="add">S</span> Documentation</a></h1>
         </header>
-        <!-- <section> -->
-          <ul class="navigation">
-          <li><a  href="#Introduction" class="nav-link">Introduction</a></li>
-          <li><a href="#What_you_should_already_know" class="nav-link">What you should already know</a></li>
-          <li><a href="#Javascript_and_Java" class="nav-link">JavaScript and Java</a></li>
-          <li><a href="#Hello_world" class="nav-link">Hello world</a></li>
-          <li><a href="#Variables" class="nav-link">Variables</a></li>
-          <li><a href="#Declaring_variables" class="nav-link">Declaring variables</a></li>
-          <li><a href="#Variable_scope" class="nav-link">Variable scope</a></li>
-          <li><a href="#Global_variables" class="nav-link">Global variables</a></li>
-          <li><a href="#Constants" class="nav-link">Constants</a></li>
-          <li><a href="#Data_types" class="nav-link">Data types</a></li>
-          <li><a href="#if...else_statement" class="nav-link">if...else statement</a></li>
-          <li><a href="#while_statement" class="nav-link">While statement</a></li>
-          <li><a href="#Function_declarations" class="nav-link">Function declarations</a></li>
-          <li><a href="#Reference" class="nav-link">Reference</a></li>
-          </ul>
-        <!-- </section> -->
-        <div class="nav-burger">
-          <div id="line1"></div>
-          <div id="line2"></div>
-          <div id="line3"></div>
+
+          <div class="navigation">
+
+            <div class="nav-link">
+              <a  href="#Introduction" >Introduction</a>
+            </div>
+            <div class="nav-link">
+              <a href="#What_you_should_already_know" >What you should already know</a>
+            </div>
+
+            <div class="nav-link">
+              <a href="#Javascript_and_Java" >JavaScript and Java</a>
+            </div>
+            <div class="nav-link">
+              <a href="#Hello_world" >Hello world</a>
+            </div>
+            <div class="nav-link">
+              <a href="#Variables" >Variables</a>
+            </div>
+            <div class="nav-link">
+              <a href="#Declaring_variables" >Declaring variables</a>
+            </div>
+            <div class="nav-link">
+              <a href="#Variable_scope" >Variable scope</a></div>
+            <div class="nav-link">
+              <a href="#Global_variables">Global variables</a>
+            </div>
+            <div class="nav-link">
+              <a href="#Constants" >Constants</a>
+            </div>
+            <div class="nav-link">
+              <a href="#Data_types" >Data types</a>
+            </div>
+            <div class="nav-link">
+              <a href="#if...else_statement" >if...else statement</a>
+            </div>
+            <div class="nav-link">
+              <a href="#while_statement" >While statement</a>
+            </div>
+            <div class="nav-link">
+              <a href="#Function_declarations" >Function declarations</a>
+            </div>
+            <div class="nav-link">
+              <a href="#Reference" >Reference</a>
+            </div>
+          </div>
+
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
         </div>
       </nav>
 
@@ -54,16 +87,16 @@
             supplementing it with additional objects; for example:
           </p>
           <ul>
-            <li>
+            <div>
               Client-side JavaScript extends the core language by supplying objects to control a browser and its Document Object Model
               (DOM). For example, client-side extensions allow an application to place elements on an HTML form and respond to user
               events such as mouse clicks, form input, and page navigation.
-            </li>
-            <li>
+            </div>
+            <div>
               Server-side JavaScript extends the core language by supplying objects relevant to running JavaScript on a server. For
               example, server-side extensions allow an application to communicate with a database, provide continuity of information
               from one invocation to another of the application, or perform file manipulations on a server.
-            </li>
+            </div>
           </ul>
         </article>
       </section>
@@ -76,11 +109,11 @@
             This guide assumes you have the following basic background:
           </p>
           <ul>
-            <li>A general understanding of the Internet and the World Wide Web (WWW)</li>
-            <li>Good working knowledge of HyperText Markup Language (HTML).</li>
-            <li>Some programming experience. If you are new to programming, try one of the tutorials linked on the main page
+            <div>A general understanding of the Internet and the World Wide Web (WWW)</div>
+            <div>Good working knowledge of HyperText Markup Language (HTML).</div>
+            <div>Some programming experience. If you are new to programming, try one of the tutorials linked on the main page
               about
-              JavaScript.</li>
+              JavaScript.</div>
           </ul>
         </article>
       </section>
@@ -290,16 +323,16 @@
             The latest ECMAScript standard defines seven data types:
           </p>
           <ul>
-            <li>Six data types that are primitives:</li>
+            <div>Six data types that are primitives:</div>
             <ul>
-              <li>Boolean. true and false</li>
-              <li>null. A special keyword denoting a null value. Because JavaScripte is case-sensitive, null is not the same as Null, NULL, or any other variant.</li>
-              <li>undefined. A top-level property whose value is undefined.</li>
-              <li>Number. 42 or 3.14159.</li>
-              <li>String."Howdy"</li>
-              <li>Symbol (new in ECMAScript 2015). A data type whose instances are unique and immutable.</li>
+              <div>Boolean. true and false</div>
+              <div>null. A special keyword denoting a null value. Because JavaScripte is case-sensitive, null is not the same as Null, NULL, or any other variant.</div>
+              <div>undefined. A top-level property whose value is undefined.</div>
+              <div>Number. 42 or 3.14159.</div>
+              <div>String."Howdy"</div>
+              <div>Symbol (new in ECMAScript 2015). A data type whose instances are unique and immutable.</div>
             </ul>
-            <li>and Object</li>
+            <div>and Object</div>
           </ul>
           <p>
             Although these data types are a relatively small amount, they enable you to perform useful functions with your
@@ -410,15 +443,15 @@
             With each iteration, the loop increments n and adds that value to x. Therefore, x and n take on the following values:
           </p>
           <ul>
-            <li>
+            <div>
               After the first pass: n = 1 and x = 1
-            </li>
-            <li>
+            </div>
+            <div>
               After the second pass: n = 2 and x = 3
-            </li>
-            <li>
+            </div>
+            <div>
               After the third pass: n = 3 and x = 6
-            </li>
+            </div>
           </ul>
           <p>
             After completing the third pass, the condition n < 3 is no longer true, so the loop terminates.
@@ -435,13 +468,13 @@
             followed by:
           </p>
           <ul>
-            <li>The name of the function.</li>
-            <li>
+            <div>The name of the function.</div>
+            <div>
               A list of arguments to the function, enclosed in parentheses and seperated by commas.
-            </li>
-            <li>
+            </div>
+            <div>
               The JavaScript statements that define the function, enclosed in curly brackets,<code>{}</code>
-            </li>
+            </div>
           </ul>
           <p>
             For example, the following code defines a simple function named square:
@@ -473,7 +506,7 @@
         </header>
         <section>
           <ul>
-            <li>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">MDN</a></li>
+            <div>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">MDN</a></div>
           </ul>
         </section>
       </section>
